@@ -1,0 +1,52 @@
+\documentclass[conference]{template/IEEEtran}
+\usepackage{amsmath} %math environment like align
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.shapes}
+\usetikzlibrary{arrows}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx} %figures and includegraphics
+\usepackage{tabularx,calc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{algorithm}
+\usepackage{algpseudocode} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[numbers]{natbib}
+\usepackage{multicol}
+\usepackage[bookmarks=true]{hyperref}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{util/util.tex}
+\input{util/theorem_proof_environment.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pdfinfo{
+   /Author (Andreas Orthey)
+   /Subject (Motion Planning)
+   /Keywords (AI;Robotics;Humanoid Locomotion;Multi-Contact Motion Planning;Reactive Motion Planning;Active Inverse Optimal Control;Model Predictive Control;Machine Learning)
+Robotics
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%line distance (1.0 - 1.5)
+%1em = height of letter M
+%\renewcommand{\baselinestretch}{1.0}\normalsize
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\rdate[1]{{\bf{#1}}\newline}
+\newcommand\R{\ensuremath{ {\mathbb{R}} }}
+
+\begin{document}
+\title{Default Paper Draft, IEEE transaction style}
+
+\author{Author Names Omitted for Anonymous Review. Paper-ID [add your ID here]}
+\maketitle
+\IEEEpeerreviewmaketitle
+\section{Introduction}
+
+\section*{Proofs}
+\printproofs
+\bibliographystyle{plainnat}
+\bibliography{bib/general,bib/psychology,bib/mathematics}
+\end{document}

@@ -1,0 +1,176 @@
+\usepackage{xspace}
+\def\q{ \ensuremath{q} }
+\def\z{ \ensuremath{z} }
+\def\u{ \ensuremath{u} }
+\newcommand\norm[1]{ \ensuremath{\|#1\|_2} }
+\newcommand\vb{ \ensuremath{\mathbf{v}} }
+\newcommand\zb{ \ensuremath{\mathbf{z}} }
+\newcommand\bb{ \ensuremath{\mathbf{b}} }
+\newcommand\ab{ \ensuremath{\mathbf{a}} }
+\newcommand\xb{ \ensuremath{\mathbf{x}} }
+\newcommand\sbb{ \ensuremath{\mathbf{s}} }
+\newcommand\lb{ \ensuremath{\mathbf{l}} }
+\newcommand\Lb{ \ensuremath{\mathbf{L}} }
+\newcommand\Db{ \ensuremath{\mathbf{D}} }
+\newcommand\Lc{ \ensuremath{\mathcal{L}} }
+\newcommand\Ln{ \ensuremath{{L}} }
+\newcommand\hLn{ \ensuremath{\hat{L}} }
+\newcommand\hKb{ \ensuremath{\hat{\mathbf{K}}} }
+\newcommand\hzb{ \ensuremath{\hat{\mathbf{z}}} }
+\newcommand\nb{ \ensuremath{\mathbf{n}} }
+\newcommand\hnb{ \ensuremath{\hat{\mathbf{n}}} }
+\newcommand\Kb{ \ensuremath{\mathbf{K}} }
+\newcommand\In{ \ensuremath{{I}} }
+\newcommand\Epsilon{ \ensuremath{{\boldsymbol{\epsilon}}} }
+\newcommand\lnf{\ensuremath{\|f\|_{Lip}}}
+\newcommand\lnfc{\ensuremath{\|f\|_{Lip(\Omega)}}}
+\newcommand\lnfa{\ensuremath{\|f\|_{Lip(A)}}}
+\newcommand\lnfb{\ensuremath{\|f\|_{Lip(B)}}}
+\newcommand\Dc{\ensuremath{\mathcal{D}_C}}
+\newcommand\basis{\ensuremath{\phi}}
+\newcommand\Basis{\ensuremath{\Phi}}
+\newcommand\wlg{w.l.o.g.\xspace}
+%%environment and environment element
+\newcommand\env{\ensuremath{\mathbf{E}}}
+\newcommand\envelem{\ensuremath{\mathbf{e}}}
+\newcommand\envenergy{\ensuremath{\mathbf{g}}}
+\newcommand\manifoldproj{\ensuremath{\mathbf{P}}}
+\newcommand\manifoldmod{\ensuremath{\mathbf{M}}}
+\newcommand\manifold{\ensuremath{\mathbf{m}}}
+
+\newcommand\sweptvolume{\ensuremath{\mathbf{V}}}
+\newcommand\projsv{\ensuremath{{{\tilde{V}}}}}
+\newcommand\svelem{\ensuremath{\mathbf{v}}}
+\newcommand\ring{\ensuremath{\mathcal{R}}}
+\newcommand\elemmeasure{\ensuremath{\mu_{\envelem}}}
+\newcommand\taskspace{\ensuremath{\mathcal{T}}}
+\newcommand\workspace{\ensuremath{\mathcal{W}}}
+\newcommand\mpproblem{\ensuremath{\mathcal{P}}}
+
+%\newcommand{\diag}{\mathop{\mathrm{diag}}}
+\DeclareMathOperator{\diag}{\mathbf{diag}}
+
+\def\x{ \ensuremath{x} }
+\def\p{ \ensuremath{p} }
+\def\qT{ \ensuremath{q_{1:T}} }
+\def\C{ \ensuremath{\mathcal{C}} }
+\def\Cfunc{ \ensuremath{\mathbf{C}} }
+\def\CF{\ensuremath{{\cal{C}}_{free}}}
+\def\CO{\ensuremath{{\cal{C}}_{obs}}}
+\def\co{\CO}
+\def\cf{\CF}
+\def\P{\ensuremath{{\cal{P}}}\xspace}
+\def\Pf{\ensuremath{{\cal{P}}_{f}}\xspace}
+\newcommand\Psp{\ensuremath{{p_{\pi}}}}
+\newcommand\pio{\ensuremath{\pi^{\star}}}
+
+\newcommand\EP[1]{\ensuremath{\mathbb{E}\left[#1\right]}}
+\def\PXX{\ensuremath{P(x,\dot{x})}}
+\def\PCX{\ensuremath{P(\dot{x}|x)}}
+\def\PX{\ensuremath{P(x)}}
+\def\eps{\ensuremath{\epsilon}}
+\def\S{\ensuremath{\mathcal{S}}\xspace}
+\def\E{\ensuremath{\mathcal{E}}\xspace}
+\def\Robot{\ensuremath{\mathcal{R}}\xspace}
+\def\robot{\Robot}
+\def\Qt{\ensuremath{\mathcal{\tilde{Q}}}\xspace}
+\def\QH{\ensuremath{Q_{\text{HRP2}}}\xspace}
+
+\def\X{\ensuremath{\mathcal{X}}\xspace}
+\def\Q{\ensuremath{\mathcal{Q}}\xspace}
+\def\Xt{\ensuremath{\mathcal{\tilde{X}}}\xspace}
+\def\Dt{\ensuremath{\mathcal{\tilde{D}}}\xspace}
+\def\D{\ensuremath{\mathcal{D}}\xspace}
+
+\DeclareMathOperator*{\T}{\mathbf{T}}
+
+\def\N{\ensuremath{\mathbb{N}}\xspace}
+
+\def\A{\ensuremath{\mathcal{A}}\xspace}
+\def\C{\ensuremath{\mathcal{C}}\xspace}
+\def\B{\ensuremath{\mathcal{B}}\xspace}
+\def\F{\ensuremath{\mathcal{F}}\xspace}
+\def\V{\ensuremath{\mathcal{V}}\xspace}
+\def\F{\ensuremath{\mathcal{F}}\xspace}
+\def\M{\ensuremath{\mathcal{M}}\xspace}
+\def\U{\ensuremath{\mathcal{U}}\xspace}
+\def\D{\ensuremath{\mathcal{D}}\xspace}
+\def\H{\ensuremath{\mathcal{H}}\xspace}
+\def\K{\ensuremath{\mathcal{K}}\xspace}
+\def\PXZ{\ensuremath{\mathcal{P}_{xz}}\xspace}
+
+\DeclareMathOperator*{\argmin}{\arg\!\min\ }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% SPECIAL BEAMER STYLES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% tikzstyles %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xspace}
+\usetikzlibrary{patterns}
+\xdefinecolor{darkgreen}{rgb}{0,0.60,0}
+\xdefinecolor{lightgray}{rgb}{0.9,0.9,0.9}
+\tikzset{
+    -|/.style={
+        to path={
+            (perpendicular cs: horizontal line through={(\tikztostart)},
+                                 vertical line through={(\tikztotarget)})
+            % is the same as (\tikztostart -| \tikztotarget)
+            % but just to be safe: http://tex.stackexchange.com/a/29781/16595
+            -- (\tikztotarget) \tikztonodes
+        }
+    }
+}
+\tikzstyle{taskRect}=[draw, color=black!70, fill=black!7, rectangle, rounded
+corners, thick, minimum width=3cm, minimum height=0.6cm]
+\tikzstyle{borderRect}=[draw, color=red!70, fill=gray!7, rectangle, rounded
+corners, thick, minimum width=8cm, minimum height=3cm]
+\tikzstyle{testBRect}=[draw, color=darkgreen!100, fill=gray!7, rectangle, rounded
+corners, thick, minimum width=8cm, minimum height=3cm]
+\tikzstyle{stdBR}=[draw, color=black, fill=gray!7, rectangle, rounded
+corners, thick, minimum width=8cm, minimum height=3cm]
+\tikzstyle{boundingBox}=[draw, color=red!100, fill=gray!7, rectangle, rounded
+corners, thick, minimum width=3cm, minimum height=1cm]
+\tikzstyle{arrow}=[->, draw, thick]
+\tikzstyle{darrow}=[->, draw, ultra thick]
+\tikzstyle{uarrow}=[-, draw, ultra thick]
+\tikzstyle{hlBox}=[draw, color=red!70, fill=black!7, rectangle, rounded
+corners, ultra thick, minimum width=3cm, minimum height=0.6cm]
+\tikzstyle{nUnit}=[draw, color=black!70, fill=black!7, circle, rounded
+corners, ultra thick, minimum width=1cm, minimum height=0.2cm]
+\tikzstyle{subspace}=[draw, circle, color=black, fill=black!7, thick, pattern=north east lines, pattern color=black!20, minimum width=1cm, minimum height=0.2cm]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% defining the new dimensions and parameters
+\newlength{\hatchspread}
+\newlength{\hatchthickness}
+\newlength{\hatchshift}
+\newcommand{\hatchcolor}{}
+% declaring the keys in tikz
+\tikzset{hatchspread/.code={\setlength{\hatchspread}{#1}},
+         hatchthickness/.code={\setlength{\hatchthickness}{#1}},
+         hatchshift/.code={\setlength{\hatchshift}{#1}},% must be >= 0
+         hatchcolor/.code={\renewcommand{\hatchcolor}{#1}}}
+% setting the default values
+\tikzset{hatchspread=3pt,
+         hatchthickness=0.4pt,
+         hatchshift=0pt,% must be >= 0
+         hatchcolor=black}
+% declaring the pattern
+\pgfdeclarepatternformonly[\hatchspread,\hatchthickness,\hatchshift,\hatchcolor]% variables
+   {custom north west lines}% name
+   {\pgfqpoint{\dimexpr-2\hatchthickness}{\dimexpr-2\hatchthickness}}% lower left corner
+   {\pgfqpoint{\dimexpr\hatchspread+2\hatchthickness}{\dimexpr\hatchspread+2\hatchthickness}}% upper right corner
+   {\pgfqpoint{\dimexpr\hatchspread}{\dimexpr\hatchspread}}% tile size
+   {% shape description
+    \pgfsetlinewidth{\hatchthickness}
+    \pgfpathmoveto{\pgfqpoint{0pt}{\dimexpr\hatchspread+\hatchshift}}
+    \pgfpathlineto{\pgfqpoint{\dimexpr\hatchspread+0.15pt+\hatchshift}{-0.15pt}}
+    \ifdim \hatchshift > 0pt
+      \pgfpathmoveto{\pgfqpoint{0pt}{\hatchshift}}
+      \pgfpathlineto{\pgfqpoint{\dimexpr0.15pt+\hatchshift}{-0.15pt}}
+    \fi
+    \pgfsetstrokecolor{\hatchcolor}
+%    \pgfsetdash{{1pt}{1pt}}{0pt}% dashing cannot work correctly in all situation this way
+    \pgfusepath{stroke}
+   }
+
