@@ -101,10 +101,12 @@
 \def\PXZ{\ensuremath{\mathcal{P}_{xz}}\xspace}
 
 \DeclareMathOperator*{\argmin}{\arg\!\min\ }
+\DeclareMathOperator{\conv}{\mathbf{conv}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Algorithm
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \algnewcommand{\And}{\textbf{and}\xspace}
+\algdef{SE}[DOWHILE]{Do}{doWhile}{\algorithmicdo}[1]{\algorithmicwhile\ #1}%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
