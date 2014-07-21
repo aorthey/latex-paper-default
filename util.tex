@@ -72,10 +72,17 @@
 \def\eps{\ensuremath{\epsilon}}
 \def\S{\ensuremath{\mathcal{S}}\xspace}
 \def\E{\ensuremath{\mathcal{E}}\xspace}
-\def\Robot{\ensuremath{\mathcal{R}}\xspace}
-\def\robot{\Robot}
 \def\Qt{\ensuremath{\mathcal{\tilde{Q}}}\xspace}
 \def\QH{\ensuremath{Q_{\text{HRP2}}}\xspace}
+
+\def\R{\ensuremath{\mathbb{R}}\xspace}
+\def\parents{\ensuremath{\text{parents}}\xspace}
+\def\children{\ensuremath{\text{children}}\xspace}
+\def\rotYZ{\ensuremath{\mathbf{R}_{YZ}}\xspace}
+\def\rot{\ensuremath{\mathbf{R}}\xspace}
+
+\def\Robot{\ensuremath{\mathcal{R}}\xspace}
+\def\robot{\Robot}
 
 \def\X{\ensuremath{\mathcal{X}}\xspace}
 \def\Q{\ensuremath{\mathcal{Q}}\xspace}
@@ -102,6 +109,15 @@
 
 \DeclareMathOperator*{\argmin}{\arg\!\min\ }
 \DeclareMathOperator{\conv}{\mathbf{conv}}
+
+\newcounter{todoCtr}
+
+\newcommand{\comment}[1]{\ignorespaces {\bf{\textcolor{red}{Comment} :
+}{\textcolor{red}{#1}}} }
+
+\newcommand*\todo[1]{\stepcounter{todoCtr}%
+        {\bf\textcolor{red}{TODO} \#\arabic{todoCtr} :}%
+        \textcolor{red}{#1} }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Algorithm
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
