@@ -1,4 +1,5 @@
 \usepackage{xspace}
+\usetikzlibrary{arrows, decorations.markings}
 \def\q{ \ensuremath{q} }
 \def\z{ \ensuremath{z} }
 \def\u{ \ensuremath{u} }
@@ -76,6 +77,8 @@
 \def\QH{\ensuremath{Q_{\text{HRP2}}}\xspace}
 
 \def\R{\ensuremath{\mathbb{R}}\xspace}
+
+\def\RY{\ensuremath{\mathbf{R}_Y}\xspace}
 \def\parents{\ensuremath{\text{parents}}\xspace}
 \def\children{\ensuremath{\text{children}}\xspace}
 \def\rotYZ{\ensuremath{\mathbf{R}_{YZ}}\xspace}
@@ -116,7 +119,7 @@
 }{\textcolor{red}{#1}}} }
 
 \newcommand*\todo[1]{\stepcounter{todoCtr}%
-        {\bf\textcolor{red}{TODO} \#\arabic{todoCtr} :}%
+        {\bf\textcolor{red}{TODO} \#\arabic{todoCtr}: }%
         \textcolor{red}{#1} }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Algorithm
@@ -154,14 +157,32 @@ corners, thick, minimum width=8cm, minimum height=3cm]
 corners, thick, minimum width=8cm, minimum height=3cm]
 \tikzstyle{boundingBox}=[draw, color=red!100, fill=gray!7, rectangle, rounded
 corners, thick, minimum width=3cm, minimum height=1cm]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SPECIAL ARROWS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \tikzstyle{arrow}=[->, draw, thick]
 \tikzstyle{darrow}=[->, draw, ultra thick]
 \tikzstyle{uarrow}=[-, draw, ultra thick]
+\tikzstyle{linkArrow} = [thick, decoration={markings,mark=at position
+   1 with {\arrow[semithick]{open triangle 60}}},
+   double distance=0.3cm, shorten >= 0.0pt,
+   preaction = {decorate}]
+
+
+
 \tikzstyle{hlBox}=[draw, color=red!70, fill=black!7, rectangle, rounded
 corners, ultra thick, minimum width=3cm, minimum height=0.6cm]
 \tikzstyle{nUnit}=[draw, color=black!70, fill=black!7, circle, rounded
 corners, ultra thick, minimum width=1cm, minimum height=0.2cm]
 \tikzstyle{subspace}=[draw, circle, color=black, fill=black!7, thick, pattern=north east lines, pattern color=black!20, minimum width=1cm, minimum height=0.2cm]
+
+
+\tikzstyle{endeffectorArrow} = [thick,
+                decoration={markings,mark=at position 1 with
+                {\arrow[scale=1.4,thick,black]{[}}},
+                    postaction={decorate},
+double distance=3pt, shorten >= 2.5pt]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % defining the new dimensions and parameters
 \newlength{\hatchspread}
