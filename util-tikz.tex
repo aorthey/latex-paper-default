@@ -1,0 +1,27 @@
+\newcommand\drawCapsule[3]{
+        \coordinate (A) at #1;
+        \coordinate (B) at #2;
+        \def\colorC{black!50}
+        \def\radius{#3}
+        %\pgfmathsetmacro{\linewidthC}{2pt}
+        %\pgfmathsetmacro{\linewidthCC}{1pt}
+        \def\linewidthC{2pt}
+        \def\linewidthCC{1pt}
+        \coordinate (V1) at  ($(B)!\radius!-90:(A)$);
+        \coordinate (V2) at  ($(A)!\radius!90:(B)$);
+        \coordinate (V1P) at ($(B)!\radius!90:(A)$);
+        \coordinate (V2P) at ($(A)!\radius!-90:(B)$);
+        \draw[color=\colorC, line width = \linewidthC] (A) circle (\radius);
+        \draw[color=\colorC, line width = \linewidthC] (B) circle (\radius);
+        \draw[color=\colorC,fill=white,line width=1pt] (V1) -- (V2) -- (V2P) -- (V1P) -- cycle;
+
+        \draw[color=white,fill=white,line width=2pt,shorten <= \linewidthCC, shorten >= \linewidthCC] (V1) -- (V1P);
+        \draw[color=white,fill=white,line width=2pt,shorten <= \linewidthCC, shorten >= \linewidthCC] (V2) -- (V2P);
+
+        \draw[fill=\colorC,color=\colorC] (A) circle (\linewidthCC);
+        \draw[fill=\colorC,color=\colorC] (B) circle (\linewidthCC);
+        \draw[fill=\colorC,color=\colorC,line width = \linewidthC] (V1) -- (V2);
+        \draw[fill=\colorC,color=\colorC,line width = \linewidthC] (V1P) -- (V2P);
+}
+
+
