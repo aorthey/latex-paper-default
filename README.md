@@ -11,7 +11,6 @@ Default draft paper from the scratch:
 ```
 One-liner to add default paper and bib lib (https://github.com/orthez/latex-bibliography-default)
 ```
-  git init && git submodule add git@github.com:orthez/latex-paper-default.git util && git submodule add git@github.com:orthez/latex-bibliography-default.git bib
- && cp util/default_draft.tex . 
+  git init && git submodule add git@github.com:orthez/latex-paper-default.git util && git submodule add git@github.com:orthez/latex-bibliography-default.git bib && cp util/default_draft.tex . 
 ```
 
