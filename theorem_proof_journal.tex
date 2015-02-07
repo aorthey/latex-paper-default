@@ -29,21 +29,12 @@
 \globtoksblk\prooftoks{1000}
 \newcounter{proofcount}
 
-% We gather the contents of the proof as argument to \proofatend
-% and then we store
-% "\begin{proof}[Proof of <theoremname> <theoremnumber>]#1\end{proof}"
-% in the next token register of the allocated block
-%\long\def\proofatend#1\endproofatend{%
-%  \edef\next{\noexpand\begin{IEEEproof}[Proof of \pat@label]}%
-%  \toks\numexpr\prooftoks+\value{proofcount}\relax=\expandafter{\next#1\end{IEEEproof}}
-%  \stepcounter{proofcount}}
-
 \NewEnviron{proofatend}{%
   \it{Proof in Appendix.}
   \edef\next{%
-    \noexpand\begin{IEEEproof}[Proof of \pat@label]%
+    \noexpand\begin{proof}[Proof of \pat@label]%
     \unexpanded\expandafter{\BODY}}%
-  \global\toks\numexpr\prooftoks+\value{proofcount}\relax=\expandafter{\next\end{IEEEproof}}
+  \global\toks\numexpr\prooftoks+\value{proofcount}\relax=\expandafter{\next\end{proof}}
   \stepcounter{proofcount}}
 
 % \printproofs simply loops over the used token registers of the
@@ -74,4 +65,4 @@
 \fixstatement{lemma}
 \fixstatement{corollary}
 
-\renewcommand{\IEEEQED}{\IEEEQEDopen}
+%\renewcommand{\IEEEQED}{\IEEEQEDopen}
