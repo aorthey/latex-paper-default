@@ -13,6 +13,7 @@
 \newcommand\bb{ \ensuremath{\mathbf{b}} }
 \newcommand\ab{ \ensuremath{\mathbf{a}} }
 \newcommand\xb{ \ensuremath{\mathbf{x}} }
+\newcommand\yb{ \ensuremath{\mathbf{y}} }
 \newcommand\sbb{ \ensuremath{\mathbf{s}} }
 \newcommand\lb{ \ensuremath{\mathbf{l}} }
 \newcommand\Lb{ \ensuremath{\mathbf{L}} }
@@ -58,6 +59,7 @@
 
 %\newcommand{\diag}{\mathop{\mathrm{diag}}}
 \DeclareMathOperator{\diag}{\mathbf{diag}}
+\DeclareMathOperator{\rank}{rk}
 
 \def\x{ \ensuremath{x} }
 \def\p{ \ensuremath{p} }
@@ -68,6 +70,8 @@
 \def\CO{\ensuremath{{\cal{C}}_{obs}}}
 \def\co{\CO}
 \def\cf{\CF}
+\def\cfree{\CF}
+\def\Cfree{\CF}
 \def\P{\ensuremath{{\cal{P}}}\xspace}
 \def\Pf{\ensuremath{{\cal{P}}_{f}}\xspace}
 \newcommand\Psp{\ensuremath{{p_{\pi}}}}
@@ -84,6 +88,7 @@
 \def\QH{\ensuremath{Q_{\text{HRP2}}}\xspace}
 
 \def\R{\ensuremath{\mathbb{R}}\xspace}
+\newcommand\rdate[1]{{\bf{#1}}\newline}
 
 \def\parents{\ensuremath{\text{parents}}\xspace}
 \def\children{\ensuremath{\text{children}}\xspace}
@@ -100,7 +105,9 @@
 \def\D{\ensuremath{\mathcal{D}}\xspace}
 
 \DeclareMathOperator*{\T}{\mathbf{T}}
+\DeclareMathOperator*{\RX}{\mathbf{R}_{X}}
 \DeclareMathOperator*{\RY}{\mathbf{R}_{Y}}
+\DeclareMathOperator*{\RZ}{\mathbf{R}_{Z}}
 
 \def\N{\ensuremath{\mathbb{N}}\xspace}
 
@@ -133,8 +140,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Algorithm
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\algnewcommand{\And}{\textbf{and}\xspace}
-\algdef{SE}[DOWHILE]{Do}{doWhile}{\algorithmicdo}[1]{\algorithmicwhile\ #1}%
+%\algnewcommand{\And}{\textbf{and}\xspace}
+%\algdef{SE}[DOWHILE]{Do}{doWhile}{\algorithmicdo}[1]{\algorithmicwhile\ #1}%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -246,3 +253,49 @@ double distance=3pt, shorten >= 2.5pt]
   postaction={decorate}
  }
 }
+%%%%%%%%%%%%%%%%%%%%%%%% Workspace planning variables
+\DeclareMathOperator{\interior}{int}
+\def\ajit{a_j^{(i)T}}
+\def\aji{a_j^{(i)}}
+\def\bji{b_j^{(i)}}
+
+\def\ajipt{\hat{a}_j^{(i)T}}
+\def\ajip{\hat{a}_j^{(i)}}
+\def\bjip{\hat{b}_j^{(i)}}
+
+\def\api{a_p^{(i)}}
+\def\apit{a_p^{(i)T}}
+\def\bpi{b_p^{(i)}}
+
+\def\aki{a_k^{(i)}}
+\def\akit{a_k^{(i)T}}
+\def\bki{b_k^{(i)}}
+
+\def\xji{x_{j,0}^{(i)}}
+\def\xli{x_{L}^{(i)}}
+\def\xri{x_{R}^{(i)}}
+
+\def\hrp{HRP-2\xspace}
+\def\sip{\ensuremath{S_i^p}\xspace}
+\def\bip{\ensuremath{B_i^p}\xspace}
+\def\eip{\ensuremath{E_i^p}\xspace}
+\def\obip{\ensuremath{O_k^{\bip}}\xspace}
+\def\S{\ensuremath{\mathbf{S}}\xspace}
+
+\def\RobotMaxSlope{\ensuremath{\Robot_{\theta}}\xspace}
+\def\RobotMaxHeight{\ensuremath{\Robot_{\text{H}_\text{U}}}\xspace}
+\def\RobotMinHeight{\ensuremath{\Robot_{\text{H}_\text{L}}}\xspace}
+\def\RobotFootRadius{\ensuremath{\Robot_{\text{FR}}}\xspace}
+\def\RobotFootHeight{\ensuremath{\Robot_{\text{FH}}}\xspace}
+\def\RobotMinHeadHeight{\ensuremath{\Robot_{\text{Head}}}\xspace}
+\def\RobotStepMaxHeight{\ensuremath{\Robot_{\text{StepHeight}}}\xspace}
+\def\RobotStepMaxWidth{\ensuremath{\Robot_{\text{StepWidth}}}\xspace}
+\def\RobotKneeAperture{\ensuremath{\Robot_{\text{KneeFlex}}}\xspace}
+
+\def\RobotMinSphereRadius{\ensuremath{\Robot_{\text{SphereRadius}}}\xspace}
+\def\bipfoot{\ensuremath{B_{i,F}^p}}
+\def\bipbody{\ensuremath{B_{i,B}^p}}
+\def\biphead{\ensuremath{B_{i,H}^p}}
+
+\def\bipmin{\ensuremath{\bip(\RobotMinHeight)}\xspace}
+\def\bipmax{\ensuremath{\bip(\RobotMaxHeight)}\xspace}

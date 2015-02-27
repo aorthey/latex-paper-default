@@ -1,5 +1,17 @@
-\documentclass[conference]{util/template/IEEEtran}
-\usepackage{amsmath} %math environment like align
+\documentclass[12pt]{util/sage}
+\usepackage{amsmath}
+
+%%%Article information%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\journal{International Journal of Robotics Research}
+\volume{060}
+\issue{01}
+\copyrightline{$\copyright$ Copyright}
+\firstpage{1}
+\lastpage{20}
+\doi{doi number}
+\articletype{Article type}
+\pubyear{2015}
+%%%%%%%%%%%%%%Article information%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{tikz}
@@ -20,7 +32,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \input{util/util.tex}
-\input{util/theorem_proof_environment.tex}
+\input{util/theorem_proof_journal.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\pdfinfo{
@@ -35,13 +47,25 @@
 %\renewcommand{\baselinestretch}{1.0}\normalsize
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\markboth{International Journal of Robotics Research}{Motion Planning}
 \begin{document}
-\title{Default Paper Draft, IEEE transaction style}
+\title{Default Journal Paper Draft, SAGE style}
 
 \author{Author Names Omitted for Anonymous Review. Paper-ID [add your ID here]}
+\address{LAAS-CNRS, Toulouse, France}
 \maketitle
-\IEEEpeerreviewmaketitle
+\begin{abstract}
+        Default Abstract
+\end{abstract}
 \section{Introduction}
+
+\begin{theorem}
+        Journals are good
+\end{theorem}
+
+\begin{proofatend}
+        Assume journals are bad. Contradiction. QED
+\end{proofatend}
 
 \section*{Proofs}
 \printproofs

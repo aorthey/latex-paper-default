@@ -1,0 +1,68 @@
+%% DEPENDENCIES (UBUNTU 12.04)
+%% sudo apt-get install etoolbox
+
+%% slightly modified version from:
+%%http://tex.stackexchange.com/questions/33229/how-to-place-all-proofs-automatically-in-appendix
+
+\usepackage{amsfonts} %mathbb, etc
+\usepackage{amsthm} %%definitions
+\usepackage{amsthm,amssymb}
+\usepackage{etex,etoolbox} 
+\usepackage{environ}
+\makeatletter
+
+\providecommand{\@fourthoffour}[4]{#4}
+% We define an addition for the theorem-like environments; when
+% \newtheorem{thm}{Theorem} is declared, the macro \thm expands
+% to {...}{...}{...}{Theorem} and with \@fourthoffour we access
+% to it; then we make available \@currentlabel (the theorem number)
+% also outside the environment.  
+\def\fixstatement#1{%
+  \AtEndEnvironment{#1}{%
+    \xdef\pat@label{\expandafter\expandafter\expandafter
+      \@fourthoffour\csname#1\endcsname\space\@currentlabel}}}
+
+% We allocate a block of 1000 token registers; in this way \prooftoks
+% is 1000 and we can access the following registers of the block by
+% \prooftoks+n (0<n<1000); we'll use a dedicated counter for it
+% that is stepped at every proof
+\globtoksblk\prooftoks{1000}
+\newcounter{proofcount}
+
+\NewEnviron{proofatend}{%
+  \it{Proof in Appendix.}
+  \edef\next{%
+    \noexpand\begin{proof}[Proof of \pat@label]%
+    \unexpanded\expandafter{\BODY}}%
+  \global\toks\numexpr\prooftoks+\value{proofcount}\relax=\expandafter{\next\end{proof}}
+  \stepcounter{proofcount}}
+
+% \printproofs simply loops over the used token registers of the
+% block, freeing their contents
+\def\printproofs{%
+  \count@=\z@
+  \loop
+    \the\toks\numexpr\prooftoks+\count@\relax
+    \ifnum\count@<\value{proofcount}%
+    \advance\count@\@ne
+  \repeat}
+
+\makeatother
+
+\theoremstyle{definition}
+\theoremstyle{plain}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{example}{Example}
+\newtheorem{remark}{Remark}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{assumption}{Assumption}
+
+\fixstatement{theorem}
+\fixstatement{lemma}
+\fixstatement{corollary}
+
+%\renewcommand{\IEEEQED}{\IEEEQEDopen}
