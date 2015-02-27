@@ -227,3 +227,22 @@ double distance=3pt, shorten >= 2.5pt]
     \pgfusepath{stroke}
    }
 
+\tikzset{
+ ->-/.style={
+  decoration={
+   markings,
+   mark=at position 0.5 with {\arrow{>}{angle 90};}
+  },
+  postaction={decorate}
+ }
+}
+
+\tikzset{
+ ->>-/.style={
+  decoration={
+   markings,
+   mark=at position 0.55 with {\arrow{>>}{angle 90};}
+  },
+  postaction={decorate}
+ }
+}
