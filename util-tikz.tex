@@ -34,3 +34,30 @@ color/.estore in = \colorC,
         \draw[fill=\colorC,color=\colorC] (B) circle (1pt);
 
 }
+
+\pgfdeclaredecoration{simple line}{initial}{
+  \state{initial}[width=\pgfdecoratedpathlength-1sp]{\pgfmoveto{\pgfpointorigin}}
+  \state{final}{\pgflineto{\pgfpointorigin}}
+}
+
+\tikzset{
+   shift left/.style={decorate,decoration={simple line,raise=#1}},
+   shift right/.style={decorate,decoration={simple line,raise=-1*#1}},
+   node left/.style 2 args={
+        decorate,decoration={raise=#1,markings,mark = at
+        position 0.5 with {\node[circle, color=black,fill = white] {#2};}}
+        },
+}
+
+%%% LeftShiftLine: Draw line between two nodes p1,p2, shift this line by D to the left and print a label in the middle of the line
+%%% EXAMPLE: line between p1,p2 shifted by 0.5cm with the label $d$
+%%% \LeftShiftLine[($(p1)$)][($(p2)$)][0.5cm][$d$];
+
+\def\LeftShiftLine[#1][#2][#3][#4]{
+    \begin{scope}[>=latex] % redef arrow for dimension lines
+        \draw[dashed,|-|] #1 edge[shift left=#3] #2;
+        \draw[] #1 edge[node left={#3}{#4}] #2;
+
+    \end{scope}
+}
+

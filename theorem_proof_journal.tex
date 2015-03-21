@@ -29,6 +29,9 @@
 \globtoksblk\prooftoks{1000}
 \newcounter{proofcount}
 
+\newcommand\citeproof[1]{
+        {\it{Proof in \citep{#1}}}
+}
 \NewEnviron{proofatend}{%
   \it{Proof in Appendix.}
   \edef\next{%

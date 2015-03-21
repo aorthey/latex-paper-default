@@ -60,6 +60,7 @@
 %\newcommand{\diag}{\mathop{\mathrm{diag}}}
 \DeclareMathOperator{\diag}{\mathbf{diag}}
 \DeclareMathOperator{\rank}{rk}
+\DeclareMathOperator{\asin}{asin}
 
 \def\x{ \ensuremath{x} }
 \def\p{ \ensuremath{p} }
@@ -233,4 +234,24 @@ double distance=3pt, shorten >= 2.5pt]
 %    \pgfsetdash{{1pt}{1pt}}{0pt}% dashing cannot work correctly in all situation this way
     \pgfusepath{stroke}
    }
+
+\tikzset{
+ ->-/.style={
+  decoration={
+   markings,
+   mark=at position 0.5 with {\arrow{>}{angle 90};}
+  },
+  postaction={decorate}
+ }
+}
+
+\tikzset{
+ ->>-/.style={
+  decoration={
+   markings,
+   mark=at position 0.55 with {\arrow{>>}{angle 90};}
+  },
+  postaction={decorate}
+ }
+}
 
