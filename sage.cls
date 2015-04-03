@@ -584,12 +584,12 @@
 \end{minipage}\begin{minipage}[t]{.35\textwidth}
 \hbox to\textwidth{\hss\hbox{\vtop{\vskip-4pt\hsize109pt\catchlinefonti\@journal\\
 \hbox{}\@volume(\@issue):\@firstpage--\@lastpage\\ 
-\hbox{}\copyright The Author(s) 2010\\
+\hbox{}\copyright The Author(s) 2015\\
 \hbox{}Reprints and permission:\\
 \hbox{}sagepub.co.uk/journalsPermissions.nav\\
 \hbox{}\catchlinefonti DOI:\@doi\\
 \hbox{}\catchlinefonti http://mms.sagepub.com\\[2.3pt]
-%\hbox{}\includegraphics{SAGE_LOGO.eps}
+\hbox{}\includegraphics{util/sage_logo.eps}
 \vss}}}
 \end{minipage}
 \egroup
