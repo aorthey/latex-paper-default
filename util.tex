@@ -301,3 +301,19 @@ double distance=3pt, shorten >= 2.5pt]
 
 \def\bipmin{\ensuremath{\bip(\RobotMinHeight)}\xspace}
 \def\bipmax{\ensuremath{\bip(\RobotMaxHeight)}\xspace}
+
+\newcommand\highlightBox[1]{
+\begin{wrapfigure}{O}{0.5\linewidth}
+  \begin{center}
+
+        %\fbox{
+        \begin{minipage}{0.9\linewidth}
+\it
+\large
+"#1"
+        \end{minipage}
+        %}
+  \end{center}
+\end{wrapfigure}
+}
+
