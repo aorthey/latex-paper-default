@@ -3,7 +3,6 @@
 \usepackage{xspace}
 \usepackage{mathtools}
 \usetikzlibrary{arrows, decorations.markings}
-\def\q{ \ensuremath{q} }
 \def\z{ \ensuremath{z} }
 \def\u{ \ensuremath{u} }
 
@@ -12,11 +11,26 @@
 
 \newcommand\e{\ensuremath{\mathbf{e}}\xspace}
 \newcommand\force{\ensuremath{\mathbf{F}}\xspace}
+
 \newcommand\dtau{\ensuremath{\dot{\tau}}\xspace}
 \newcommand\ddtau{\ensuremath{\ddot{\tau}}\xspace}
+\newcommand\taudtheta{\ensuremath{\dfrac{d\tau}{d\theta}}\xspace}
+\newcommand\tauddtheta{\ensuremath{\dfrac{d^2\tau}{d\theta^2}}\xspace}
+
+\newcommand\dtheta{\ensuremath{\dot{\theta}}\xspace}
+\newcommand\ddtheta{\ensuremath{\ddot{\theta}}\xspace}
+
 \newcommand\dt{\ensuremath{\Delta t}\xspace}
 \newcommand\ddt{\ensuremath{\dfrac{\Delta t^2}{2}}\xspace}
+\newcommand\ds{\ensuremath{\Delta s}\xspace}
+\newcommand\dds{\ensuremath{\dfrac{\Delta s^2}{2}}\xspace}
+
+\newcommand\q{\ensuremath{q}\xspace}
+\newcommand\dq{\ensuremath{\dot{q}}\xspace}
+\newcommand\ddq{\ensuremath{\ddot{q}}\xspace}
+
 \newcommand\FF{{\it{FF}}\xspace}
+\def\Fqq{\ensuremath{\mathcal{F}(q_I,q_G)}\xspace}
 
 \newcommand\norm[1]{ \ensuremath{\|#1\|_2} }
 \newcommand\vb{ \ensuremath{\mathbf{v}} }
@@ -101,7 +115,9 @@
 \def\Qt{\ensuremath{\mathcal{\tilde{Q}}}\xspace}
 \def\QH{\ensuremath{Q_{\text{HRP2}}}\xspace}
 
-\def\R{\ensuremath{\mathbb{R}}\xspace}
+\def\speed{\ensuremath{\theta}\xspace}
+
+\def\R{\ensuremath{\mathbf{R}}\xspace}
 \newcommand\rdate[1]{{\bf{#1}}\newline}
 
 \def\parents{\ensuremath{\text{parents}}\xspace}
@@ -126,7 +142,7 @@
 \def\N{\ensuremath{\mathbb{N}}\xspace}
 
 \def\A{\ensuremath{\mathcal{A}}\xspace}
-\def\C{\ensuremath{\mathcal{C}}\xspace}
+\def\C{\ensuremath{\mathcal{M}}\xspace}
 \def\B{\ensuremath{\mathcal{B}}\xspace}
 \def\F{\ensuremath{\mathcal{F}}\xspace}
 \def\V{\ensuremath{\mathcal{V}}\xspace}
