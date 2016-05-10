@@ -1,5 +1,5 @@
 \usepackage{siunitx}
-
+\usepackage{amssymb}
 \usepackage{xspace}
 \usepackage{mathtools}
 \usetikzlibrary{arrows, decorations.markings}
@@ -13,7 +13,9 @@
 \newcommand\force{\ensuremath{\mathbf{F}}\xspace}
 
 \newcommand\dtau{\ensuremath{\dot{\tau}}\xspace}
+\newcommand\dtaunorm{\dfrac{\dtau(s)}{\|\dtau(s)\|}}
 \newcommand\ddtau{\ensuremath{\ddot{\tau}}\xspace}
+\newcommand\ddtaumax{\ensuremath{\ddot{\tau}_{\text{max}}}\xspace}
 \newcommand\taudtheta{\ensuremath{\dfrac{d\tau}{d\theta}}\xspace}
 \newcommand\tauddtheta{\ensuremath{\dfrac{d^2\tau}{d\theta^2}}\xspace}
 
@@ -25,12 +27,16 @@
 \newcommand\ds{\ensuremath{\Delta s}\xspace}
 \newcommand\dds{\ensuremath{\dfrac{\Delta s^2}{2}}\xspace}
 
-\newcommand\q{\ensuremath{q}\xspace}
-\newcommand\dq{\ensuremath{\dot{q}}\xspace}
-\newcommand\ddq{\ensuremath{\ddot{q}}\xspace}
+\newcommand\q{\ensuremath{\mathbf{q}}\xspace}
+\newcommand\dq{\ensuremath{\mathbf{\dot{q}}}\xspace}
+\newcommand\ddq{\ensuremath{\mathbf{\ddot{q}}}\xspace}
 
 \newcommand\FF{{\it{FF}}\xspace}
 \def\Fqq{\ensuremath{\mathcal{F}(q_I,q_G)}\xspace}
+\def\Iqq{\ensuremath{\mathcal{I}(q_I,q_G)}\xspace}
+\def\Eqq{\ensuremath{\mathcal{R}(q_I,q_G)}\xspace}
+\def\FSF{\F_{S_F}}
+\def\FS{\F_{S}}
 
 \newcommand\norm[1]{ \ensuremath{\|#1\|_2} }
 \newcommand\vb{ \ensuremath{\mathbf{v}} }
@@ -116,8 +122,9 @@
 \def\QH{\ensuremath{Q_{\text{HRP2}}}\xspace}
 
 \def\speed{\ensuremath{\theta}\xspace}
+\def\speedmax{\ensuremath{\theta_{\text{max}}}\xspace}
 
-\def\R{\ensuremath{\mathbf{R}}\xspace}
+\def\R{\ensuremath{\mathbb{R}}\xspace}
 \newcommand\rdate[1]{{\bf{#1}}\newline}
 
 \def\parents{\ensuremath{\text{parents}}\xspace}
@@ -128,7 +135,7 @@
 \def\Robot{\ensuremath{\mathcal{R}}\xspace}
 \def\robot{\Robot}
 
-\def\X{\ensuremath{\mathcal{X}}\xspace}
+\def\X{\ensuremath{\mathbf{X}}\xspace}
 \def\Q{\ensuremath{\mathcal{Q}}\xspace}
 \def\Xt{\ensuremath{\mathcal{\tilde{X}}}\xspace}
 \def\Dt{\ensuremath{\mathcal{\tilde{D}}}\xspace}
@@ -141,7 +148,6 @@
 
 \def\N{\ensuremath{\mathbb{N}}\xspace}
 
-\def\A{\ensuremath{\mathcal{A}}\xspace}
 \def\C{\ensuremath{\mathcal{M}}\xspace}
 \def\B{\ensuremath{\mathcal{B}}\xspace}
 \def\F{\ensuremath{\mathcal{F}}\xspace}
@@ -153,6 +159,12 @@
 \def\H{\ensuremath{\mathcal{H}}\xspace}
 \def\K{\ensuremath{\mathcal{K}}\xspace}
 \def\L{\ensuremath{\mathbf{L}}\xspace}
+\def\M{\ensuremath{\mathbf{M}}\xspace}
+\def\A{\ensuremath{\mathbf{A}}\xspace}
+\def\G{\ensuremath{\mathbf{G}}\xspace}
+\def\H{\ensuremath{\mathbf{H}}\xspace}
+\def\Reach{\ensuremath{\mathcal{Q}}\xspace}
+\def\Line{\ensuremath{\mathcal{L}}\xspace}
 
 \def\PXZ{\ensuremath{\mathcal{P}_{xz}}\xspace}
 
