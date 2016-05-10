@@ -8,7 +8,9 @@
 
 \newcommand*\getvaluecm[2]{ \pgfmathsetmacro#1{0.0351459804*#2}}
 \newcommand\W{ \ensuremath{\mathcal{W}} }
+\newcommand\SE{ \ensuremath{SE}\xspace}
 
+%\newcommand\H{ \ensuremath{\mathbf{H}} }
 \newcommand\e{\ensuremath{\mathbf{e}}\xspace}
 \newcommand\force{\ensuremath{\mathbf{F}}\xspace}
 
@@ -27,9 +29,10 @@
 \newcommand\ds{\ensuremath{\Delta s}\xspace}
 \newcommand\dds{\ensuremath{\dfrac{\Delta s^2}{2}}\xspace}
 
-\newcommand\q{\ensuremath{\mathbf{q}}\xspace}
-\newcommand\dq{\ensuremath{\mathbf{\dot{q}}}\xspace}
-\newcommand\ddq{\ensuremath{\mathbf{\ddot{q}}}\xspace}
+\newcommand\traj{\mathbf{q}}
+\newcommand\q{\ensuremath{\traj}\xspace}
+\newcommand\dq{\ensuremath{\dot{\traj}}\xspace}
+\newcommand\ddq{\ensuremath{\ddot{\traj}}\xspace}
 
 \newcommand\FF{{\it{FF}}\xspace}
 \def\Fqq{\ensuremath{\mathcal{F}(q_I,q_G)}\xspace}
@@ -77,8 +80,9 @@
 \newcommand\one{\ensuremath{\mathbf{1}}}
 
 \newcommand\sweptvolume{\ensuremath{\mathbf{V}}}
-\newcommand\SV{\ensuremath{\mathcal{SV}}}
-\newcommand\I{\ensuremath{\mathcal{I}}}
+%\newcommand\SV{\ensuremath{\mathcal{V}}}
+\newcommand\SV{\ensuremath{V}}
+\newcommand\I{\ensuremath{\mathbf{I}}}
 \newcommand\projsv{\ensuremath{V}}
 \newcommand\projsvelem{\ensuremath{\tilde{v}}}
 \newcommand\svelem{\ensuremath{\mathbf{v}}}
@@ -124,6 +128,7 @@
 \def\speed{\ensuremath{\theta}\xspace}
 \def\speedmax{\ensuremath{\theta_{\text{max}}}\xspace}
 
+\def\N{\ensuremath{\mathbb{N}}\xspace}
 \def\R{\ensuremath{\mathbb{R}}\xspace}
 \newcommand\rdate[1]{{\bf{#1}}\newline}
 
@@ -146,17 +151,17 @@
 \DeclareMathOperator*{\RY}{\mathbf{R}_{Y}}
 \DeclareMathOperator*{\RZ}{\mathbf{R}_{Z}}
 
-\def\N{\ensuremath{\mathbb{N}}\xspace}
-
+\def\A{\ensuremath{\mathcal{A}}\xspace}
 \def\C{\ensuremath{\mathcal{M}}\xspace}
 \def\B{\ensuremath{\mathcal{B}}\xspace}
 \def\F{\ensuremath{\mathcal{F}}\xspace}
 \def\V{\ensuremath{\mathcal{V}}\xspace}
 \def\F{\ensuremath{\mathcal{F}}\xspace}
-\def\M{\ensuremath{\mathcal{M}}\xspace}
-\def\U{\ensuremath{\mathcal{U}}\xspace}
+\def\M{\ensuremath{\mathbf{M}}\xspace}
+\def\U{\ensuremath{\mathbf{U}}\xspace}
 \def\D{\ensuremath{\mathcal{D}}\xspace}
-\def\H{\ensuremath{\mathcal{H}}\xspace}
+\def\H{\ensuremath{\mathbf{H}}\xspace}
+\def\G{\ensuremath{\mathbf{G}}\xspace}
 \def\K{\ensuremath{\mathcal{K}}\xspace}
 \def\L{\ensuremath{\mathbf{L}}\xspace}
 \def\M{\ensuremath{\mathbf{M}}\xspace}
@@ -165,6 +170,9 @@
 \def\H{\ensuremath{\mathbf{H}}\xspace}
 \def\Reach{\ensuremath{\mathcal{Q}}\xspace}
 \def\Line{\ensuremath{\mathcal{L}}\xspace}
+
+\def\Line{\ensuremath{\mathbf{L}}\xspace}
+\def\Reach{\ensuremath{\mathcal{R}}\xspace}
 
 \def\PXZ{\ensuremath{\mathcal{P}_{xz}}\xspace}
 
