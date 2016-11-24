@@ -1,5 +1,5 @@
 \usepackage{siunitx}
-
+\usepackage{amssymb}
 \usepackage{xspace}
 \usepackage{mathtools}
 \usetikzlibrary{arrows, decorations.markings}
@@ -8,12 +8,17 @@
 
 \newcommand*\getvaluecm[2]{ \pgfmathsetmacro#1{0.0351459804*#2}}
 \newcommand\W{ \ensuremath{\mathcal{W}} }
+\newcommand\SE{ \ensuremath{SE}\xspace}
+\newcommand\se{ \ensuremath{\mathfrak{se}}\xspace}
 
+%\newcommand\H{ \ensuremath{\mathbf{H}} }
 \newcommand\e{\ensuremath{\mathbf{e}}\xspace}
-\newcommand\force{\ensuremath{\mathbf{F}}\xspace}
+\newcommand\force{\ensuremath{\mathbf{W}}\xspace}
 
 \newcommand\dtau{\ensuremath{\dot{\tau}}\xspace}
+\newcommand\dtaunorm{\dfrac{\dtau(s)}{\|\dtau(s)\|}}
 \newcommand\ddtau{\ensuremath{\ddot{\tau}}\xspace}
+\newcommand\ddtaumax{\ensuremath{\ddot{\tau}_{\text{max}}}\xspace}
 \newcommand\taudtheta{\ensuremath{\dfrac{d\tau}{d\theta}}\xspace}
 \newcommand\tauddtheta{\ensuremath{\dfrac{d^2\tau}{d\theta^2}}\xspace}
 
@@ -22,15 +27,22 @@
 
 \newcommand\dt{\ensuremath{\Delta t}\xspace}
 \newcommand\ddt{\ensuremath{\dfrac{\Delta t^2}{2}}\xspace}
+\newcommand\ddti{\ensuremath{\dfrac{2}{\Delta t^2}}\xspace}
 \newcommand\ds{\ensuremath{\Delta s}\xspace}
 \newcommand\dds{\ensuremath{\dfrac{\Delta s^2}{2}}\xspace}
 
-\newcommand\q{\ensuremath{q}\xspace}
-\newcommand\dq{\ensuremath{\dot{q}}\xspace}
-\newcommand\ddq{\ensuremath{\ddot{q}}\xspace}
+\newcommand\traj{\mathbf{q}}
+\newcommand\q{\ensuremath{\traj}\xspace}
+\newcommand\dq{\ensuremath{\dot{\traj}}\xspace}
+\newcommand\ddq{\ensuremath{\ddot{\traj}}\xspace}
 
 \newcommand\FF{{\it{FF}}\xspace}
 \def\Fqq{\ensuremath{\mathcal{F}(q_I,q_G)}\xspace}
+\newcommand\I{\ensuremath{\mathcal{I}}}
+\def\Iqq{\ensuremath{\I(q_I,q_G)}\xspace}
+\def\Eqq{\ensuremath{\mathcal{R}(q_I,q_G)}\xspace}
+\def\FSF{\F_{S_F}}
+\def\FS{\F_{S}}
 
 \newcommand\norm[1]{ \ensuremath{\|#1\|_2} }
 \newcommand\vb{ \ensuremath{\mathbf{v}} }
@@ -71,8 +83,9 @@
 \newcommand\one{\ensuremath{\mathbf{1}}}
 
 \newcommand\sweptvolume{\ensuremath{\mathbf{V}}}
-\newcommand\SV{\ensuremath{V}}
 \newcommand\I{\ensuremath{\mathcal{I}}}
+%\newcommand\SV{\ensuremath{\mathcal{V}}}
+\newcommand\SV{\ensuremath{V}}
 \newcommand\projsv{\ensuremath{V}}
 \newcommand\projsvelem{\ensuremath{\tilde{v}}}
 \newcommand\svelem{\ensuremath{\mathbf{v}}}
@@ -92,7 +105,6 @@
 \def\x{ \ensuremath{x} }
 \def\p{ \ensuremath{p} }
 \def\qT{ \ensuremath{q_{1:T}} }
-\def\C{ \ensuremath{\mathcal{C}} }
 \def\Cfunc{ \ensuremath{\mathbf{C}} }
 \def\CF{\ensuremath{{\cal{C}}_{free}}}
 \def\CO{\ensuremath{{\cal{C}}_{obs}}}
@@ -116,8 +128,10 @@
 \def\QH{\ensuremath{Q_{\text{HRP2}}}\xspace}
 
 \def\speed{\ensuremath{\theta}\xspace}
+\def\speedmax{\ensuremath{\theta_{\text{max}}}\xspace}
 
-\def\R{\ensuremath{\mathbf{R}}\xspace}
+\def\N{\ensuremath{\mathbb{N}}\xspace}
+\def\R{\ensuremath{\mathbb{R}}\xspace}
 \newcommand\rdate[1]{{\bf{#1}}\newline}
 
 \def\parents{\ensuremath{\text{parents}}\xspace}
@@ -128,7 +142,7 @@
 \def\Robot{\ensuremath{\mathcal{R}}\xspace}
 \def\robot{\Robot}
 
-\def\X{\ensuremath{\mathcal{X}}\xspace}
+\def\X{\ensuremath{\mathbf{X}}\xspace}
 \def\Q{\ensuremath{\mathcal{Q}}\xspace}
 \def\Xt{\ensuremath{\mathcal{\tilde{X}}}\xspace}
 \def\Dt{\ensuremath{\mathcal{\tilde{D}}}\xspace}
@@ -139,20 +153,35 @@
 \DeclareMathOperator*{\RY}{\mathbf{R}_{Y}}
 \DeclareMathOperator*{\RZ}{\mathbf{R}_{Z}}
 
-\def\N{\ensuremath{\mathbb{N}}\xspace}
-
 \def\A{\ensuremath{\mathcal{A}}\xspace}
+
 \def\C{\ensuremath{\mathcal{M}}\xspace}
+\def\tangent{T}
+\def\T{\tangent}
+\def\TC{\ensuremath{\T\mathcal{M}}\xspace}
+\def\flow{\ensuremath{\phi}\xspace}
+
+
 \def\B{\ensuremath{\mathcal{B}}\xspace}
 \def\F{\ensuremath{\mathcal{F}}\xspace}
 \def\V{\ensuremath{\mathcal{V}}\xspace}
 \def\F{\ensuremath{\mathcal{F}}\xspace}
-\def\M{\ensuremath{\mathcal{M}}\xspace}
-\def\U{\ensuremath{\mathcal{U}}\xspace}
+\def\M{\ensuremath{\mathbf{M}}\xspace}
+\def\U{\ensuremath{\mathbf{U}}\xspace}
 \def\D{\ensuremath{\mathcal{D}}\xspace}
-\def\H{\ensuremath{\mathcal{H}}\xspace}
+\def\H{\ensuremath{\mathbf{H}}\xspace}
+\def\G{\ensuremath{\mathbf{G}}\xspace}
 \def\K{\ensuremath{\mathcal{K}}\xspace}
+\def\J{\ensuremath{\mathbf{J}}\xspace}
 \def\L{\ensuremath{\mathbf{L}}\xspace}
+\def\M{\ensuremath{\mathbf{M}}\xspace}
+\def\A{\ensuremath{\mathbf{A}}\xspace}
+\def\G{\ensuremath{\mathbf{G}}\xspace}
+\def\H{\ensuremath{\mathbf{H}}\xspace}
+
+\def\Line{\ensuremath{\mathcal{L}}\xspace}
+
+\def\Line{\ensuremath{\mathbf{L}}\xspace}
 
 \def\PXZ{\ensuremath{\mathcal{P}_{xz}}\xspace}
 
@@ -346,3 +375,4 @@ double distance=3pt, shorten >= 2.5pt]
 \end{wrapfigure}
 }
 
+\newcommand*{\xdash}[1][3em]{\rule[0.5ex]{#1}{0.55pt}}
