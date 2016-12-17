@@ -327,7 +327,7 @@ centering]{geometry}
 \hbox{}sagepub.co.uk/journalsPermissions.nav\\
 \hbox{}DOI: 10.1177/ToBeAssigned\\
 \hbox{}www.sagepub.com/\\[2.3pt]
-\hbox{}\includegraphics[height=4mm]{SAGE_Logo}
+\hbox{}\includegraphics[height=4mm]{util/ijrr/SAGE_Logo}
 \end{minipage}
 {\par\large%
 \if@Royal
