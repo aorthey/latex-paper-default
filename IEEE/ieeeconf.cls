@@ -3306,10 +3306,10 @@ between column types.}%
 % V1.6b providing this command makes hyperref think the natbib package is
 % in use so that it will not interfere with cite.sty. However, as a result,
 % citation numbers will not be hyperlinked.
-\def\NAT@parse{\typeout{IEEEtran error: Attempt to use fake Natbib command 
-which is provided to fool Hyperref.}}
+%\def\NAT@parse{\typeout{IEEEtran error: Attempt to use fake Natbib command 
+%which is provided to fool Hyperref.}}
 % it easy enough to override via:
-% \let\NAT@parse\undefined
+\let\NAT@parse\undefined
 
 
 % V1.6 class files should always provide these
