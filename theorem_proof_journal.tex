@@ -7,7 +7,7 @@
 \usepackage{amsfonts} %mathbb, etc
 \usepackage{amsthm} %%definitions
 \usepackage{amsthm,amssymb}
-\usepackage{etex,etoolbox} 
+\usepackage{etoolbox} 
 \usepackage{environ}
 \makeatletter
 
@@ -32,12 +32,13 @@
 \newcommand\citeproof[1]{
         {\it{Proof in \citep{#1}}}
 }
+\renewcommand\qedsymbol{$\square$}
 \NewEnviron{proofatend}{%
   \it{Proof in Appendix.}
   \edef\next{%
     \noexpand\begin{proof}[Proof of \pat@label]%
     \unexpanded\expandafter{\BODY}}%
-  \global\toks\numexpr\prooftoks+\value{proofcount}\relax=\expandafter{\next\end{proof}}
+  \global\toks\numexpr\prooftoks+\value{proofcount}\relax=\expandafter{\next\hfill\qedsymbol\end{proof}}
   \stepcounter{proofcount}}
 
 % \printproofs simply loops over the used token registers of the
@@ -48,7 +49,8 @@
     \the\toks\numexpr\prooftoks+\count@\relax
     \ifnum\count@<\value{proofcount}%
     \advance\count@\@ne
-  \repeat}
+  \repeat
+}
 
 \makeatother
 
