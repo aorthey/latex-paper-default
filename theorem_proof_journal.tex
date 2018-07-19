@@ -4,11 +4,6 @@
 %% slightly modified version from:
 %%http://tex.stackexchange.com/questions/33229/how-to-place-all-proofs-automatically-in-appendix
 
-\usepackage{amsfonts} %mathbb, etc
-\usepackage{amsthm} %%definitions
-\usepackage{amsthm,amssymb}
-\usepackage{etoolbox} 
-\usepackage{environ}
 \makeatletter
 
 \providecommand{\@fourthoffour}[4]{#4}
@@ -38,7 +33,7 @@
   \edef\next{%
     \noexpand\begin{proof}[Proof of \pat@label]%
     \unexpanded\expandafter{\BODY}}%
-  \global\toks\numexpr\prooftoks+\value{proofcount}\relax=\expandafter{\next\hfill\qedsymbol\end{proof}}
+  \global\toks\numexpr\prooftoks+\value{proofcount}\relax=\expandafter{\next\hfill\end{proof}}
   \stepcounter{proofcount}}
 
 % \printproofs simply loops over the used token registers of the
